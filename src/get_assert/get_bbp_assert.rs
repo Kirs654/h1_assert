@@ -55,7 +55,7 @@ pub async fn total_count(cookie:String,csrf:String) -> Result<(), Box<dyn std::e
              // 注意在这里使用了 `await`
             total_count = parsed_response.data.opportunities_search.total_count;
             println!("程序总数{}",total_count);
-            let _get_hander =  get_all_hander(cookie.clone(),csrf.clone(),total_count).await?;
+    
 
             //println!("Total Count: {}", parsed_response.data.opportunities_search.total_count);
             //println!("Response Body: {}", body);
@@ -66,7 +66,7 @@ pub async fn total_count(cookie:String,csrf:String) -> Result<(), Box<dyn std::e
             println!("Unexpected status code: {}", status);
         }
     }
-
+let _get_hander =  get_all_hander(cookie.clone(),csrf.clone(),total_count).await?;
     Ok(())
 
 }
