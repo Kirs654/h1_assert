@@ -127,7 +127,7 @@ async fn get_all_hander(cookie:String,csrf:String,total:usize)-> Result<(), Box<
                     handle.push(node.handle.clone());
             
                  }
-                 let _get_assert = get_assertions(cookie.clone(),csrf.clone(),handle.clone()).await?;
+        
             }
             status => {
                 // 响应出错
@@ -137,6 +137,7 @@ async fn get_all_hander(cookie:String,csrf:String,total:usize)-> Result<(), Box<
         }
     
     }
+    let _get_assert = get_assertions(cookie.clone(),csrf.clone(),handle.clone()).await?;
     Ok(())
 
 }
